@@ -2,6 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Darren Worrall, darren@iweb.co.uk
 
 RUN apt-get update
+RUN apt-get install -qy --no-install-recommends openjdk-7-jdk
 RUN apt-get install -qy openssh-server
 RUN mkdir /var/run/sshd
 
