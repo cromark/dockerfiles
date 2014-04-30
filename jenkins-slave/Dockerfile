@@ -3,7 +3,7 @@ MAINTAINER Darren Worrall, darren@iweb.co.uk
 
 RUN apt-get update
 RUN apt-get install -qy --no-install-recommends openjdk-7-jdk
-RUN apt-get install -qy openssh-server git
+RUN apt-get install -qy openssh-server git build-essential python-dev
 RUN mkdir /var/run/sshd
 
 RUN adduser --system --shell /bin/bash --gecos 'jenkins slave user' --disabled-password --home /home/jenkins jenkins
