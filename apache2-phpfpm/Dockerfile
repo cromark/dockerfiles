@@ -16,6 +16,7 @@ RUN php5enmod mcrypt
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD apache_extra.conf /etc/apache2/conf-enabled/apache_extra.conf
+ADD www.conf /etc/php5/fpm/pool.d/www.conf
 
 EXPOSE 80
 CMD ["/usr/bin/supervisord"]
